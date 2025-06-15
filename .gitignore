@@ -4,3 +4,4 @@ QCE Paper Resources/
 
 # Ignore a file
 .DS_Store
+src/inputs.py
