@@ -36,7 +36,6 @@ QITE/
 ├── figures/
 ├── src/
 │   ├── get_results.py
-│   ├── inputs.py
 │   ├── qiskit_qite.py
 │   ├── qite_batched_estimator.py
 │   ├── real_device.py
@@ -53,7 +52,7 @@ QITE/
 
 The code relies on Python packages such as `qiskit`, `openfermion`, `numpy`, `scipy` and `matplotlib`. Running the examples also requires access to IBM Quantum services with valid credentials.
 
-Some paths and API tokens are currently hard-coded in `src/inputs.py`. Edit that file or set your own configuration before running the examples.
+Some paths and API tokens are currently hard-coded in `src/inputs.py`. Set your own configuration with a custom inputs.py file inside src before running the examples.
 
 ## Usage
 
