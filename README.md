@@ -1,6 +1,9 @@
 # QITE
+[![arXiv](https://img.shields.io/badge/arXiv-2504.18156-B31B1B.svg)](https://arxiv.org/abs/2504.18156)
 
-This repository contains research code exploring **Quantum Imaginary Time Evolution (QITE)** using [Qiskit](https://qiskit.org/). It includes scripts for running the algorithm on molecular Hamiltonians and utilities for working with OpenFermion data.
+This repository contains research code exploring **Quantum Imaginary Time Evolution (QITE)** using [Qiskit](https://qiskit.org/). It accompanies the paper ["Quantum Imaginary Time Evolution"](https://arxiv.org/abs/2504.18156) which demonstrates the technique on a classical emulator. The code here extends those results with support for simulations on the `AerSimulator` and execution on IBM Quantum hardware. It includes scripts for running the algorithm on molecular Hamiltonians and utilities for working with OpenFermion data.
+
+This work also cites [a related Nature Physics study](https://www.nature.com/articles/s41567-019-0704-4) and a follow-up in *Communications Chemistry* (https://www.nature.com/articles/s42004-022-00701-8).
 
 ## Repository layout
 
@@ -36,6 +39,7 @@ QITE/
 ├── figures/
 ├── src/
 │   ├── get_results.py
+│   ├── inputs.py
 │   ├── qiskit_qite.py
 │   ├── qite_batched_estimator.py
 │   ├── real_device.py
@@ -50,9 +54,40 @@ QITE/
 
 ## Requirements
 
-The code relies on Python packages such as `qiskit`, `openfermion`, `numpy`, `scipy` and `matplotlib`. Running the examples also requires access to IBM Quantum services with valid credentials.
+Install the main Python packages used for QITE:
 
-Some paths and API tokens are currently hard-coded in `src/inputs.py`. Set your own configuration with a custom inputs.py file inside src before running the examples.
+```bash
+pip install qiskit qiskit-aer qiskit-ibmq-provider openfermion numpy scipy matplotlib
+```
+
+Not every package is needed for the simplest demonstrations, but installing them avoids missing-module errors. If you keep your own `requirements.txt`, you can install from it instead.
+
+Some paths and API tokens are currently hard-coded in `src/inputs.py`. Edit that file or set your own configuration before running the examples.
+
+## Getting started
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/QITE.git
+cd QITE/src
+```
+
+2. Install the necessary Python packages:
+
+**Linux/macOS**
+
+```bash
+pip install qiskit qiskit-aer qiskit-ibmq-provider openfermion numpy scipy matplotlib
+```
+
+**Windows**
+
+```cmd
+py -m pip install qiskit qiskit-aer qiskit-ibmq-provider openfermion numpy scipy matplotlib
+```
+
+After installation you can run the example scripts from this directory. Not every package is required for simple tests, but installing them all avoids missing-module errors.
 
 ## Usage
 
@@ -64,6 +99,19 @@ python examples/n2/qite_matrix_exponential.py
 
 Scripts may require customizing the backend settings and file paths in `src/inputs.py`.
 
-## Notes
+## Citation
 
-The repository does not contain an installation script or explicit licensing information. Use at your own discretion and adjust the configuration for your environment.
+If you use this repository or refer to the associated research, please cite it alongside the companion paper:
+
+1. H. Ariff, *"Quantum Imaginary Time Evolution,"* arXiv:2504.18156, 2025.
+2. H. Ariff, *QITE Simulation Code*, GitHub repository, 2025. [Online]. Available: https://github.com/yourusername/QITE
+3. *Nature Physics* article, 2019. [Online]. Available: https://www.nature.com/articles/s41567-019-0704-4
+4. *Communications Chemistry* article, 2022. [Online]. Available: https://www.nature.com/articles/s42004-022-00701-8
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and open a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
