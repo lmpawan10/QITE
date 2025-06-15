@@ -1,9 +1,7 @@
 # QITE
 [![arXiv](https://img.shields.io/badge/arXiv-2504.18156-B31B1B.svg)](https://arxiv.org/abs/2504.18156)
 
-This repository contains research code exploring **Quantum Imaginary Time Evolution (QITE)** using [Qiskit](https://qiskit.org/). It accompanies the paper ["Quantum Imaginary Time Evolution"](https://arxiv.org/abs/2504.18156) which demonstrates the technique on a classical emulator. The code here extends those results with support for simulations on the `AerSimulator` and execution on IBM Quantum hardware. It includes scripts for running the algorithm on molecular Hamiltonians and utilities for working with OpenFermion data.
-
-This work also cites [a related Nature Physics study](https://www.nature.com/articles/s41567-019-0704-4) and a follow-up in *Communications Chemistry* (https://www.nature.com/articles/s42004-022-00701-8).
+This repository contains research code exploring **Quantum Imaginary Time Evolution (QITE)** using [Qiskit](https://qiskit.org/). It accompanies the paper ["Determining Molecular Ground State with Quantum Imaginary Time Evolution using Broken-Symmetry Wave Function"](https://arxiv.org/abs/2504.18156) which demonstrates the technique on a classical emulator. The code here extends those results with support for simulations on the `AerSimulator` and execution on IBM Quantum hardware. It includes scripts for running the algorithm on molecular Hamiltonians and utilities for working with OpenFermion data.
 
 ## Repository layout
 
@@ -54,40 +52,60 @@ QITE/
 
 ## Requirements
 
-Install the main Python packages used for QITE:
+Install the Python dependencies using the provided `requirements.txt` file:
 
 ```bash
-pip install qiskit qiskit-aer qiskit-ibmq-provider openfermion numpy scipy matplotlib
+pip install -r requirements.txt
 ```
 
-Not every package is needed for the simplest demonstrations, but installing them avoids missing-module errors. If you keep your own `requirements.txt`, you can install from it instead.
+Not every package listed there is required for the simplest demonstrations, but installing them all avoids missing-module errors.
 
 Some paths and API tokens are currently hard-coded in `src/inputs.py`. Edit that file or set your own configuration before running the examples.
 
 ## Getting started
 
-1. Clone the repository:
+1. Clone the repository and enter it:
 
 ```bash
 git clone https://github.com/yourusername/QITE.git
-cd QITE/src
+cd QITE
 ```
 
-2. Install the necessary Python packages:
+2. *(Recommended)* Create a Python virtual environment and activate it:
 
 **Linux/macOS**
 
 ```bash
-pip install qiskit qiskit-aer qiskit-ibmq-provider openfermion numpy scipy matplotlib
+python3 -m venv .venv
+source .venv/bin/activate
 ```
 
 **Windows**
 
 ```cmd
-py -m pip install qiskit qiskit-aer qiskit-ibmq-provider openfermion numpy scipy matplotlib
+py -m venv .venv
+.\.venv\Scripts\activate
 ```
 
-After installation you can run the example scripts from this directory. Not every package is required for simple tests, but installing them all avoids missing-module errors.
+3. Install the Python dependencies from `requirements.txt`:
+
+**Linux/macOS**
+
+```bash
+pip install -r requirements.txt
+```
+
+**Windows**
+
+```cmd
+py -m pip install -r requirements.txt
+```
+
+Not every package in the file is necessary for basic usage, but installing them all ensures nothing is missing. Afterwards you can move into the `src` directory and run the example scripts:
+
+```bash
+cd src
+```
 
 ## Usage
 
@@ -101,12 +119,34 @@ Scripts may require customizing the backend settings and file paths in `src/inpu
 
 ## Citation
 
-If you use this repository or refer to the associated research, please cite it alongside the companion paper:
+If you build on this repository, please cite the companion paper and this code as follows.
 
-1. H. Ariff, *"Quantum Imaginary Time Evolution,"* arXiv:2504.18156, 2025.
-2. H. Ariff, *QITE Simulation Code*, GitHub repository, 2025. [Online]. Available: https://github.com/yourusername/QITE
-3. *Nature Physics* article, 2019. [Online]. Available: https://www.nature.com/articles/s41567-019-0704-4
-4. *Communications Chemistry* article, 2022. [Online]. Available: https://www.nature.com/articles/s42004-022-00701-8
+**Companion paper**
+
+P. S. Poudel, K. Sugisaki, M. Hajdušek, and R. Van Meter, "Determining Molecular Ground State with Quantum Imaginary Time Evolution using Broken-Symmetry Wave Function," *arXiv*, 2025. Available: <https://arxiv.org/abs/2504.18156>
+
+**Code repository**
+
+P. S. Poudel, K. Sugisaki, M. Hajdušek, and R. Van Meter, *QITE Simulation Code*, GitHub repository, 2025. [Online]. Available: <https://github.com/yourusername/QITE>
+
+**BibTeX**
+
+```bibtex
+@misc{pawan2025qite,
+  title={Determining Molecular Ground State with Quantum Imaginary Time Evolution using Broken-Symmetry Wave Function},
+  author={Pawan Sharma Poudel and Kenji Sugisaki and Michal Hajdušek and Rodney Van Meter},
+  year={2025},
+  eprint={2504.18156},
+  archivePrefix={arXiv},
+  primaryClass={physics.chem-ph},
+  url={https://arxiv.org/abs/2504.18156},
+}
+```
+
+## References
+
+- *Nature Physics* article, 2019. [Online]. Available: <https://www.nature.com/articles/s41567-019-0704-4>
+- *Communications Chemistry* article, 2022. [Online]. Available: <https://www.nature.com/articles/s42004-022-00701-8>
 
 ## Contributing
 
