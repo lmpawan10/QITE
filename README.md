@@ -127,7 +127,7 @@ P. S. Poudel, K. Sugisaki, M. Hajdušek, and R. Van Meter, "Determining Molecula
 
 **Code repository**
 
-P. S. Poudel, K. Sugisaki, M. Hajdušek, and R. Van Meter, *QITE Simulation Code*, GitHub repository, 2025. [Online]. Available: <https://github.com/yourusername/QITE>
+P. S. Poudel, K. Sugisaki, M. Hajdušek, and R. Van Meter, *QITE Simulation Code*, GitHub repository, 2025. [Online]. Available: <https://github.com/lmpawan10/QITE>
 
 **BibTeX**
 
