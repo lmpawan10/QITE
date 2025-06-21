@@ -3,6 +3,8 @@
 
 This repository contains research code exploring **Quantum Imaginary Time Evolution (QITE)** using [Qiskit](https://qiskit.org/). It accompanies the paper ["Determining Molecular Ground State with Quantum Imaginary Time Evolution using Broken-Symmetry Wave Function"](https://arxiv.org/abs/2504.18156) which demonstrates the technique on a classical emulator. The code here extends those results with support for simulations on the `AerSimulator` and execution on IBM Quantum hardware. It includes scripts for running the algorithm on molecular Hamiltonians and utilities for working with OpenFermion data.
 
+This work also cites [a related Nature Physics study](https://www.nature.com/articles/s41567-019-0704-4) and a follow-up in *Communications Chemistry* (https://www.nature.com/articles/s42004-022-00701-8).
+
 ## Repository layout
 
 - `src/` – main modules implementing QITE algorithms and helper utilities to run jobs on IBM Quantum backends.
@@ -16,6 +18,8 @@ This repository contains research code exploring **Quantum Imaginary Time Evolut
 ```
 QITE/
 ├── README.md
+├── LICENSE
+├── requirements.txt
 ├── data/
 │   ├── 4H_Cluster_Integrals/
 │   ├── Ethylene_STO-6G_Integrals/
@@ -29,11 +33,11 @@ QITE/
 │   └── h2_s2.dat
 ├── examples/
 │   ├── h4/
-│   │   └── qiskit_qite_h4_sv.py
+│   │   └── qiskit_qite_h4.py
 │   ├── n2/
 │   │   └── qite_matrix_exponential.py
 │   └── p4/
-│       └── qiskit_qite_p4_sv.py
+│       └── qiskit_qite_p4.py
 ├── figures/
 ├── src/
 │   ├── get_results.py
@@ -67,7 +71,7 @@ Some paths and API tokens are currently hard-coded in `src/inputs.py`. Edit that
 1. Clone the repository and enter it:
 
 ```bash
-git clone https://github.com/lmpawan10/QITE.git
+git clone https://github.com/yourusername/QITE.git
 cd QITE
 ```
 
@@ -127,7 +131,7 @@ P. S. Poudel, K. Sugisaki, M. Hajdušek, and R. Van Meter, "Determining Molecula
 
 **Code repository**
 
-P. S. Poudel, K. Sugisaki, M. Hajdušek, and R. Van Meter, *QITE Simulation Code*, GitHub repository, 2025. [Online]. Available: <https://github.com/lmpawan10/QITE>
+P. S. Poudel, K. Sugisaki, M. Hajdušek, and R. Van Meter, *QITE Simulation Code*, GitHub repository, 2025. [Online]. Available: <https://github.com/yourusername/QITE>
 
 **BibTeX**
 
