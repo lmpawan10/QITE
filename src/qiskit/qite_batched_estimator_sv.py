@@ -7,8 +7,8 @@ from scipy import linalg as SciLA
 import matplotlib.pyplot as plt
 from itertools import product
 
-from inputs import get_backend, get_channel, get_ibm_token, get_instance, get_json_file_path
-from real_device import BatchedEstimator
+from .src.inputs import get_backend, get_channel, get_ibm_token, get_instance, get_json_file_path
+from .src.real_device import BatchedEstimator
 
 import qiskit
 from qiskit.circuit import QuantumCircuit

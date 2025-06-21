@@ -4,7 +4,7 @@ from scipy.sparse.linalg import expm_multiply
 from scipy import linalg as SciLA
 import matplotlib.pyplot as plt
 
-from inputs import get_backend, get_channel, get_ibm_token, get_instance
+from .src.inputs import get_backend, get_channel, get_ibm_token, get_instance
 
 import qiskit
 from qiskit.circuit import QuantumCircuit

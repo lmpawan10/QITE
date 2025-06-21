@@ -29,11 +29,11 @@ QITE/
 │   └── h2_s2.dat
 ├── examples/
 │   ├── h4/
-│   │   └── qiskit_qite_h4.py
+│   │   └── qiskit_qite_h4_sv.py
 │   ├── n2/
 │   │   └── qite_matrix_exponential.py
 │   └── p4/
-│       └── qiskit_qite_p4.py
+│       └── qiskit_qite_p4_sv.py
 ├── figures/
 ├── src/
 │   ├── get_results.py
@@ -67,7 +67,7 @@ Some paths and API tokens are currently hard-coded in `src/inputs.py`. Edit that
 1. Clone the repository and enter it:
 
 ```bash
-git clone https://github.com/yourusername/QITE.git
+git clone https://github.com/lmpawan10/QITE.git
 cd QITE
 ```
 

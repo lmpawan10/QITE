@@ -22,7 +22,7 @@ from qiskit.synthesis import QDrift, SuzukiTrotter, MatrixExponential, LieTrotte
 from qiskit.transpiler.preset_passmanagers import generate_preset_pass_manager
 from qiskit_ibm_runtime import EstimatorV2 as Estimator, QiskitRuntimeService, SamplerV2 as Sampler
 
-from inputs import get_backend, get_channel, get_ibm_token, get_instance, get_qctrl_api_key, get_hub, get_group, get_project
+from .src.inputs import get_backend, get_channel, get_ibm_token, get_instance, get_qctrl_api_key, get_hub, get_group, get_project
 
 
 fo.authenticate_qctrl_account(api_key=get_qctrl_api_key())
