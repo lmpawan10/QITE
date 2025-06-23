@@ -7,9 +7,12 @@ This work also cites [a related Nature Physics study](https://www.nature.com/art
 
 ## Repository layout
 
-- `src/` – main modules implementing QITE algorithms and helper utilities to run jobs on IBM Quantum backends.
-- `utilities/` – functions for building Hamiltonians and preparing data.
-- `examples/` – example scripts for specific molecules (H₄, N₂, P₄) demonstrating usage of the code.
+- `src/` – Python modules implementing the QITE algorithm. The `qiskit/` and `cirq/`
+  subdirectories provide implementations for those frameworks along with helper
+  scripts for running on real hardware.
+- `utilities/` – helper functions for building Hamiltonians and preparing data.
+- `examples/` – example scripts for molecules such as H₄, N₂ and P₄ demonstrating
+  how to use the code.
 - `data/` – sample integral files used by the example scripts.
 - `figures/` – pre-generated plots from previous runs.
 
@@ -18,7 +21,6 @@ This work also cites [a related Nature Physics study](https://www.nature.com/art
 ```
 QITE/
 ├── README.md
-├── LICENSE
 ├── requirements.txt
 ├── data/
 │   ├── 4H_Cluster_Integrals/
@@ -27,25 +29,29 @@ QITE/
 │   ├── Integrals_4H_RHF_UHF/
 │   ├── Integrals_N2_BS2/
 │   ├── Integrals_N2_BS3/
-│   ├── Integrals_N2_RHF/
+│   └── Integrals_N2_RHF/
 │   ├── h2.dat
 │   ├── h2_bkt_s2.dat
 │   └── h2_s2.dat
 ├── examples/
 │   ├── h4/
-│   │   └── qiskit_qite_h4.py
+│   │   └── qiskit_qite_h4_sv.py
 │   ├── n2/
 │   │   └── qite_matrix_exponential.py
 │   └── p4/
-│       └── qiskit_qite_p4.py
+│       └── qiskit_qite_p4_sv.py
 ├── figures/
 ├── src/
 │   ├── get_results.py
-│   ├── inputs.py
-│   ├── qiskit_qite.py
-│   ├── qite_batched_estimator.py
 │   ├── real_device.py
-│   └── test3_qctrl.py
+│   ├── cirq/
+│   │   └── qite_cirq_h2_simulator_sampler.py
+│   └── qiskit/
+│       ├── qiskit_qite_sv.py
+│       ├── qite_batched_estimator_sv.py
+│       ├── qite_qiskit_h1_simulator_sampler.py
+│       ├── qite_qiskit_h2_fake_backend_and_simulator_sampler.py
+│       └── test3_qctrl_sv.py
 └── utilities/
     ├── 4h_utility.py
     ├── P4_utility.py
