@@ -3,7 +3,7 @@
 
 This repository contains research code exploring **Quantum Imaginary Time Evolution (QITE)** using [Qiskit](https://qiskit.org/). It accompanies the paper ["Determining Molecular Ground State with Quantum Imaginary Time Evolution using Broken-Symmetry Wave Function"](https://arxiv.org/abs/2504.18156) which demonstrates the technique on a classical emulator. The code here extends those results with support for simulations on the `AerSimulator` and execution on IBM Quantum hardware. It includes scripts for running the algorithm on molecular Hamiltonians and utilities for working with OpenFermion data.
 
-This work also cites [a related Nature Physics study](https://www.nature.com/articles/s41567-019-0704-4) and a follow-up in *Communications Chemistry* (https://www.nature.com/articles/s42004-022-00701-8).
+This work also cites (https://www.nature.com/articles/s41567-019-0704-4) and (https://www.nature.com/articles/s42004-022-00701-8).
 
 ## Repository layout
 
@@ -137,7 +137,7 @@ P. S. Poudel, K. Sugisaki, M. Hajdušek, and R. Van Meter, "Determining Molecula
 
 **Code repository**
 
-P. S. Poudel, K. Sugisaki, M. Hajdušek, and R. Van Meter, *QITE Simulation Code*, GitHub repository, 2025. [Online]. Available: <https://github.com/yourusername/QITE>
+P. S. Poudel, K. Sugisaki, M. Hajdušek, and R. Van Meter, *QITE Simulation Code*, GitHub repository, 2025. [Online]. Available: <https://github.com/lmpawan10/QITE>
 
 **BibTeX**
 
